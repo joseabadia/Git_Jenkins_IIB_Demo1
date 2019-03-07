@@ -26,9 +26,9 @@ CREATE COMPUTE MODULE Git_Jenkins_IIB_Demo_Compute
 		END WHILE;
 	END;
 	
-	CREATE PROCEDURE setName(name) {
+	CREATE PROCEDURE setName(name) BEGIN
      SET name = name;
-	}
+	END;
 	
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
