@@ -9,10 +9,10 @@ CREATE COMPUTE MODULE Git_Jenkins_IIB_Demo_Compute
 	*/
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		DECLARE inputRef REFERENCE TO InputRoot;
+		DECLARE inputRef REFERENCE TO InputRoot; --Create field statement
 		CALL CopyMessageHeaders();
-		CALL tooLongProcedureNameBecauseItHasMoreThan30characters();
 		CALL CopyEntireMessage();
+		CALL setName(();
 		RETURN TRUE;
 	END;
 
@@ -26,8 +26,10 @@ CREATE COMPUTE MODULE Git_Jenkins_IIB_Demo_Compute
 		END WHILE;
 	END;
 	
-	CREATE PROCEDURE tooLongProcedureNameBecauseItHasMoreThan30characters()BEGIN
-	END;
+	CREATE PROCEDURE setName(name) {
+     SET name = name;
+	}
+	
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot = InputRoot;
