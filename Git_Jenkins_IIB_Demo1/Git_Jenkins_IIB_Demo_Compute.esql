@@ -12,7 +12,7 @@ CREATE COMPUTE MODULE Git_Jenkins_IIB_Demo_Compute
 		DECLARE inputRef REFERENCE TO InputRoot; --Create field statement
 		CALL CopyMessageHeaders();
 		CALL CopyEntireMessage();
-		CALL setName(();
+		CALL setName();
 		RETURN TRUE;
 	END;
 
